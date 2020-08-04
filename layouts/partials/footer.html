@@ -27,22 +27,20 @@
       {{ if .Site.Params.newsletter.enable }}
       <div class="col-md-4 col-sm-12">
         <!-- <h5>Newsletter</h5> -->
-        <p>Stay up to date with email notification</p>
-        <form>
-          <div class="form-group">
-            <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              placeholder="Enter email"
-            />
-            <small id="emailHelp" class="form-text text-muted"
-              >We'll never share your email with anyone else.</small
-            >
+        <p>Get in touch🤍, find me on </p>
+          <div class="text-container ml-auto">
+              <ul class="social-link d-flex">
+                {{ range .Site.Params.author.socialLinks }}
+                <li>
+                {{ if eq .name "Email" }}
+                    <a href="mailto:{{ .url }}" target="/"><i class="{{ .icon }}"></i></a>
+                {{ else }}
+                    <a href="{{ .url }}" target="/"><i class="{{ .icon }}"></i></a>
+                {{ end }}
+                </li>
+                {{ end }}
+              </ul>  
           </div>
-          <button type="submit" class="btn btn-info">Submit</button>
-        </form>
       </div>
       {{ end }}
     </div>
@@ -53,7 +51,7 @@
       <div class="col-md-4">
         <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
           <img src="/assets/images/inverted-logo.png">
-          Toha
+          Mayank Meena
         </a>
       </div>
       <div class="col-md-4 text-center">{{ if .Site.Params.copyright }}{{ .Site.Params.copyright }}{{ else }}© 2020 Copyright.{{ end }}</div>

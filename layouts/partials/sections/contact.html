@@ -3,27 +3,21 @@
     <h1 class="text-center">{{ .section.name }}</h1>
   {{ end }}
   <div class="container d-flex-block">
-    <div class="row" id="primary-skills">
+    <div class="contact-form-container" id="contact-form-container">
         <form name="contact" method="POST" data-netlify="true">
-  <p>
-    <label>Your Name: <input type="text" name="name" /></label>   
-  </p>
-  <p>
-    <label>Your Email: <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <label>Your Role: <select name="role[]" multiple>
-      <option value="leader">Leader</option>
-      <option value="follower">Follower</option>
-    </select></label>
-  </p>
-  <p>
-    <label>Message: <textarea name="message"></textarea></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
+          <p>
+            <label><input placeholder="Name" type="text" name="name" /></label>   
+          </p>
+          <p>
+            <label><input placeholder="Email" type="email" name="email" /></label>
+          </p>
+          <p>
+            <label><textarea placeholder="Message" name="message"></textarea></label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
     </div>
   </div>
 </div>
