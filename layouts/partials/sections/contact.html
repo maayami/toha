@@ -4,15 +4,16 @@
   {{ end }}
   <div class="container d-flex-block">
     <div class="contact-form-container" id="contact-form-container">
+          <p>{{.message}}</p> 
         <form name="contact" method="POST" data-netlify="true">
           <p>
-            <label><input placeholder="Name" type="text" name="name" /></label>   
+            <label><input placeholder="Your full name here" type="text" name="name" required="true" /></label>   
           </p>
           <p>
-            <label><input placeholder="Email" type="email" name="email" /></label>
+            <label><input placeholder="Your email here" type="email" name="email" required="true" /></label>
           </p>
           <p>
-            <label><textarea placeholder="Message" name="message"></textarea></label>
+            <label><textarea placeholder="Your message for me here💖" name="message" required="true"></textarea></label>
           </p>
           <p>
             <button type="submit">Send</button>
